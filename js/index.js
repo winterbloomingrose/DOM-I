@@ -47,10 +47,31 @@ https://www.textcompare.org/html/ */
 
 // NAVIGATION LINKS // 
   let navigation = document.querySelectorAll("nav a");
+
+
+
   navigation.forEach((item, i) =>{
     let navContent = siteContent["nav"]
     item.textContent = navContent[`nav-item-${i+1}`];
+    item.style.color = "green";
   })
+
+  // append //
+  let additionsApp = document.querySelector("nav");
+  let newNavia = document.createElement("a");
+  newNavia.textContent="-WHO DIS?";
+  newNavia.style.color="green";
+  additionsApp.append(newNavia);
+
+  // prepend // 
+
+  let additionsPre = document.querySelector("nav");
+  let newNavip = document.createElement("a");
+  newNavip.textContent="NEW LINK-";
+  newNavip.style.color="green";
+  additionsPre.prepend(newNavip);
+
+  // there is definitely a better way to do this that i gotta look into //
 
 // LOGO IMAGE SOURCE //
   let logo = document.getElementById("logo-img");
