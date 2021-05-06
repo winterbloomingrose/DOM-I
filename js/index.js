@@ -45,7 +45,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]) */
 https://www.w3schools.com/jsref/met_element_queryselectorall.asp 
 https://www.textcompare.org/html/ */
 
-// NAVIGATION LINKS CONTENT // 
+// NAVIGATION LINKS // 
   let navigation = document.querySelectorAll("nav a");
   navigation.forEach((item, i) =>{
     let navContent = siteContent["nav"]
@@ -64,61 +64,39 @@ https://www.textcompare.org/html/ */
   let ctaImage = document.getElementById("cta-img");
   ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
-/* 
+//MAIN CONTENT//
+  // TOP CONTENT //
+    const topHeader = document.querySelectorAll('.top-content h4');
+    const topcontentTexts = document.querySelectorAll('.top-content p');
+    // FEATURES // 
+      topHeader[0].textContent = (siteContent['main-content']['features-h4'])
+      topcontentTexts[0].textContent = (siteContent['main-content']['features-content'])
+      // ABOUT // 
+      topHeader[1].textContent = (siteContent['main-content']['about-h4']);
+      topcontentTexts[1].textContent = (siteContent['main-content']['about-content']);
+  // MIDDLE IMAGE DIVIDER // 
+    let middleimg = document.getElementById("middle-img");
+    middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-MAIN CONTENT STARTS
+  // BOTTOM CONTENT // 
+    const bottomHeader = document.querySelectorAll('.bottom-content h4');
+    const bottomcontentTexts = document.querySelectorAll('.bottom-content p');
+      // SERVICE // 
+        bottomHeader[0].textContent = (siteContent['main-content']['services-h4']);
+        bottomcontentTexts[0].textContent = (siteContent['main-content']['services-content']);
+      // PRODUCT // 
+        bottomHeader[1].textContent = (siteContent['main-content']['product-h4']);
+        bottomcontentTexts[1].textContent = (siteContent['main-content']['product-content']);
+      // VISION // 
+        bottomHeader[2].textContent = (siteContent['main-content']['vision-h4']);
+        bottomcontentTexts[2].textContent = (siteContent['main-content']['vision-content']);
 
-*/
-// FEATURES // 
-  const featuresHeader = document.querySelectorAll('.top-content h4');
-  featuresHeader[0].textContent = (siteContent['main-content']['features-h4'])
-
-  const featuresParagraph = document.querySelectorAll('.top-content p');
-  featuresParagraph[0].textContent = (siteContent['main-content']['features-content'])
-
-// ABOUT // 
-  const aboutHeader = document.querySelectorAll('.top-content h4');
-  aboutHeader[1].textContent = (siteContent['main-content']['about-h4'])
-
-  const aboutParagraph = document.querySelectorAll('.top-content p');
-  aboutParagraph[1].textContent = (siteContent['main-content']['about-content'])
-// MIDDLE IMAGE // 
-  let middleimg = document.getElementById("middle-img");
-  middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
-// SERVICE // 
-  const serviceHeader = document.querySelectorAll('.bottom-content h4');
-  serviceHeader[0].textContent = (siteContent['main-content']['services-h4']);
-
-  const serviceText = document.querySelectorAll('.bottom-content p');
-  serviceText[0].textContent = (siteContent['main-content']['services-content']);
-
-// PRODUCT // 
-  const productHeader = document.querySelectorAll('.bottom-content h4');
-  productHeader[1].textContent = (siteContent['main-content']['product-h4']);
-
-  const productContent = document.querySelectorAll('.bottom-content p');
-  productContent[1].textContent = (siteContent['main-content']['product-content']);
-// VISION // 
-  const visionHeader = document.querySelectorAll('.bottom-content h4');
-  visionHeader[2].textContent = (siteContent['main-content']['vision-h4']);
-
-  const visionContent = document.querySelectorAll('.bottom-content p');
-  visionContent[2].textContent = (siteContent['main-content']['vision-content']);
-
-/* 
-
-CONTACT 
-
-*/
+// CONTACT //
+  const addressFields = document.querySelectorAll('.contact p');
   const contactHeader = document.querySelectorAll('.contact h4');
+
   contactHeader[0].textContent = (siteContent['contact']['contact-h4']);
 
-  const address = document.querySelectorAll('.contact p');
-  address[0].textContent = (siteContent['contact']['address']);
-
-  const phone = document.querySelectorAll('.contact p');
-  phone[1].textContent = (siteContent['contact']['phone']);
-
-  const email = document.querySelectorAll('.contact p');
-  email[2].textContent = (siteContent['contact']['email']);
+  addressFields[0].textContent = (siteContent['contact']['address']);
+  addressFields[1].textContent = (siteContent['contact']['phone']);
+  addressFields[2].textContent = (siteContent['contact']['email']);
