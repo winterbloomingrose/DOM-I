@@ -41,15 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]) */
 
-// Thank you https://www.textcompare.org/html/ //
+/* Thank you 
+https://www.w3schools.com/jsref/met_element_queryselectorall.asp 
+https://www.textcompare.org/html/ */
 
-// lines 20-25 // 
+// LINES 20-25 // 
+  let navigation = document.querySelectorAll("nav a");
+  navigation.forEach((item, i) =>{
+    let navContent = siteContent["nav"]
+    item.textContent = navContent[`nav-item-${i+1}`];
+  })
 
 // LINE 28 //
   let logo = document.getElementById("logo-img");
   logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// line 33-34// 
+// LINES 33-34// 
   let awesomeHeader = document.querySelector("section h1");
   awesomeHeader.textContent = siteContent["cta"].h1;
 
@@ -58,18 +65,18 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]) */
   ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // LINES 43-46 // 
-  const featuresHeader = document.querySelector('.top-content h4');
-  featuresHeader.textContent = (siteContent['main-content']['features-h4'])
+  const featuresHeader = document.querySelectorAll('.top-content h4');
+  featuresHeader[0].textContent = (siteContent['main-content']['features-h4'])
 
-  const featuresParagraph = document.querySelector('.top-content p');
-  featuresParagraph.textContent = (siteContent['main-content']['features-content'])
+  const featuresParagraph = document.querySelectorAll('.top-content p');
+  featuresParagraph[0].textContent = (siteContent['main-content']['features-content'])
 
-// line 49 - 52// 
-  const aboutHeader = document.querySelector('.top-content h4');
-  aboutHeader.textContent = (siteContent['main-content']['about-h4'])
+// LINES 49 - 52// 
+  const aboutHeader = document.querySelectorAll('.top-content h4');
+  aboutHeader[1].textContent = (siteContent['main-content']['about-h4'])
 
-  const aboutParagraph = document.querySelector('.top-content p');
-  aboutParagraph.textContent = (siteContent['main-content']['about-content'])
+  const aboutParagraph = document.querySelectorAll('.top-content p');
+  aboutParagraph[1].textContent = (siteContent['main-content']['about-content'])
   
 // line 56-57 // 
   e
@@ -89,3 +96,5 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]) */
   e
 // line 96 //  
   e
+
+/* 6/15 complete */
