@@ -45,68 +45,80 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]) */
 https://www.w3schools.com/jsref/met_element_queryselectorall.asp 
 https://www.textcompare.org/html/ */
 
-// LINES 20-25 // 
+// NAVIGATION LINKS CONTENT // 
   let navigation = document.querySelectorAll("nav a");
   navigation.forEach((item, i) =>{
     let navContent = siteContent["nav"]
     item.textContent = navContent[`nav-item-${i+1}`];
   })
 
-// LINE 28 //
+// LOGO IMAGE SOURCE //
   let logo = document.getElementById("logo-img");
   logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// LINES 33-34// 
+// HEADER "DOM IS AWESOME"// 
   let awesomeHeader = document.querySelector("section h1");
   awesomeHeader.textContent = siteContent["cta"].h1;
 
-// LINE 36 // 
+// CIRCLE IMAGE SOURCE // 
   let ctaImage = document.getElementById("cta-img");
   ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
-// LINES 43-46 // 
+/* 
+
+MAIN CONTENT STARTS
+
+*/
+// FEATURES // 
   const featuresHeader = document.querySelectorAll('.top-content h4');
   featuresHeader[0].textContent = (siteContent['main-content']['features-h4'])
 
   const featuresParagraph = document.querySelectorAll('.top-content p');
   featuresParagraph[0].textContent = (siteContent['main-content']['features-content'])
 
-// LINES 49 - 52// 
+// ABOUT // 
   const aboutHeader = document.querySelectorAll('.top-content h4');
   aboutHeader[1].textContent = (siteContent['main-content']['about-h4'])
 
   const aboutParagraph = document.querySelectorAll('.top-content p');
   aboutParagraph[1].textContent = (siteContent['main-content']['about-content'])
-// LINE 53 // 
+// MIDDLE IMAGE // 
   let middleimg = document.getElementById("middle-img");
   middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// line 56-57 // 
+// SERVICE // 
   const serviceHeader = document.querySelectorAll('.bottom-content h4');
-  serviceHeader[1].textContent = (siteContent['main-content']['services-h4']);
+  serviceHeader[0].textContent = (siteContent['main-content']['services-h4']);
 
   const serviceText = document.querySelectorAll('.bottom-content p');
-  serviceText[1].textContent = (siteContent['main-content']['services-content']);
+  serviceText[0].textContent = (siteContent['main-content']['services-content']);
 
-// line 61- 64 // 
+// PRODUCT // 
   const productHeader = document.querySelectorAll('.bottom-content h4');
-  productHeader[2].textContent = (siteContent['main-content']['product-h4']);
+  productHeader[1].textContent = (siteContent['main-content']['product-h4']);
 
   const productContent = document.querySelectorAll('.bottom-content p');
-  productContent[2].textContent = (siteContent['main-content']['product-content']);
-// line 67-70 // 
-  e
-// line 73-76// 
-  e
-// line 84// 
-  e
-// line 86-87//
-  e
-// line 89 // 
-  e
-// line 91 // 
-  e
-// line 96 //  
-  e
+  productContent[1].textContent = (siteContent['main-content']['product-content']);
+// VISION // 
+  const visionHeader = document.querySelectorAll('.bottom-content h4');
+  visionHeader[2].textContent = (siteContent['main-content']['vision-h4']);
 
-/* 6/15 complete */
+  const visionContent = document.querySelectorAll('.bottom-content p');
+  visionContent[2].textContent = (siteContent['main-content']['vision-content']);
+
+/* 
+
+CONTACT 
+
+*/
+  const contactHeader = document.querySelectorAll('.contact h4');
+  contactHeader[0].textContent = (siteContent['contact']['contact-h4']);
+
+  const address = document.querySelectorAll('.contact p');
+  address[0].textContent = (siteContent['contact']['address']);
+
+  const phone = document.querySelectorAll('.contact p');
+  phone[1].textContent = (siteContent['contact']['phone']);
+
+  const email = document.querySelectorAll('.contact p');
+  email[2].textContent = (siteContent['contact']['email']);
