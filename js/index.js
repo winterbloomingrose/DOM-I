@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]) */
 
+// Thank you https://www.textcompare.org/html/ //
 
 // lines 20-25 // 
 
@@ -49,22 +50,27 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]) */
   logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // line 33-34// 
-  let headerOne = document.querySelector("section h1");
-  headerOne.textContent = siteContent["cta"].h1;
+  let awesomeHeader = document.querySelector("section h1");
+  awesomeHeader.textContent = siteContent["cta"].h1;
 
 // LINE 36 // 
   let ctaImage = document.getElementById("cta-img");
   ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // LINES 43-46 // 
-  const headerFour = document.querySelector('.text-content h4');
-  headerFour.textContent = (siteContent['main-content']['features-h4'])
+  const featuresHeader = document.querySelector('.top-content h4');
+  featuresHeader.textContent = (siteContent['main-content']['features-h4'])
 
-  const mainParagraph = document.querySelector('.text-content p');
-  mainParagraph.textContent = (siteContent['main-content']['features-content'])
+  const featuresParagraph = document.querySelector('.top-content p');
+  featuresParagraph.textContent = (siteContent['main-content']['features-content'])
 
 // line 49 - 52// 
-  e
+  const aboutHeader = document.querySelector('.top-content h4');
+  aboutHeader.textContent = (siteContent['main-content']['about-h4'])
+
+  const aboutParagraph = document.querySelector('.top-content p');
+  aboutParagraph.textContent = (siteContent['main-content']['about-content'])
+  
 // line 56-57 // 
   e
 // line 61- 64 // 
