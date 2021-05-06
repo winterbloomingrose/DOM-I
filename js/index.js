@@ -37,29 +37,49 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+/* Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]) */
 
-// line 9 //
-let titledom = document.getElementByClass("title");
-titledom.textContent = 'DOM';
 
 // lines 20-25 // 
 
-// line 28 //
-const logoimg = document.getElementById ('logo-img');
-logoimg.src = 'img/logo.png';
+// LINE 28 //
+  let logo = document.getElementById("logo-img");
+  logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
 // line 33-34// 
-// line 36 // 
-// line 43-46 // 
+  let headerOne = document.querySelector("section h1");
+  headerOne.textContent = siteContent["cta"].h1;
+
+// LINE 36 // 
+  let ctaImage = document.getElementById("cta-img");
+  ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// LINES 43-46 // 
+  const headerFour = document.querySelector('.text-content h4');
+  headerFour.textContent = (siteContent['main-content']['features-h4'])
+
+  const mainParagraph = document.querySelector('.text-content p');
+  mainParagraph.textContent = (siteContent['main-content']['features-content'])
+
 // line 49 - 52// 
+  e
 // line 56-57 // 
+  e
 // line 61- 64 // 
-// line 67-70 //  
+  e
+// line 67-70 // 
+  e
 // line 73-76// 
+  e
 // line 84// 
-// line 86-87// 
+  e
+// line 86-87//
+  e
 // line 89 // 
+  e
 // line 91 // 
+  e
 // line 96 //  
+  e
