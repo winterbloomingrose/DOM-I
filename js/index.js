@@ -77,11 +77,23 @@ https://www.textcompare.org/html/ */
 
   const aboutParagraph = document.querySelectorAll('.top-content p');
   aboutParagraph[1].textContent = (siteContent['main-content']['about-content'])
-  
+// LINE 53 // 
+  let middleimg = document.getElementById("middle-img");
+  middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
 // line 56-57 // 
-  e
+  const serviceHeader = document.querySelectorAll('.bottom-content h4');
+  serviceHeader[1].textContent = (siteContent['main-content']['services-h4']);
+
+  const serviceText = document.querySelectorAll('.bottom-content p');
+  serviceText[1].textContent = (siteContent['main-content']['services-content']);
+
 // line 61- 64 // 
-  e
+  const productHeader = document.querySelectorAll('.bottom-content h4');
+  productHeader[2].textContent = (siteContent['main-content']['product-h4']);
+
+  const productContent = document.querySelectorAll('.bottom-content p');
+  productContent[2].textContent = (siteContent['main-content']['product-content']);
 // line 67-70 // 
   e
 // line 73-76// 
