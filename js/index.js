@@ -37,6 +37,87 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+/* Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]) */
+
+/* Thank you 
+https://www.w3schools.com/jsref/met_element_queryselectorall.asp 
+https://www.textcompare.org/html/ */
+
+// NAVIGATION LINKS // 
+  let navigation = document.querySelectorAll("nav a");
+
+
+
+  navigation.forEach((item, i) =>{
+    let navContent = siteContent["nav"]
+    item.textContent = navContent[`nav-item-${i+1}`];
+    item.style.color = "green";
+  })
+
+  // append //
+  let additionsApp = document.querySelector("nav");
+  let newNavia = document.createElement("a");
+  newNavia.textContent="-WHO DIS?";
+  newNavia.style.color="green";
+  additionsApp.append(newNavia);
+
+  // prepend // 
+
+  let additionsPre = document.querySelector("nav");
+  let newNavip = document.createElement("a");
+  newNavip.textContent="NEW LINK-";
+  newNavip.style.color="green";
+  additionsPre.prepend(newNavip);
+
+  // there is definitely a better way to do this that i gotta look into //
+
+// LOGO IMAGE SOURCE //
+  let logo = document.getElementById("logo-img");
+  logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// HEADER "DOM IS AWESOME"// 
+  let awesomeHeader = document.querySelector("section h1");
+  awesomeHeader.textContent = siteContent["cta"].h1;
+
+// CIRCLE IMAGE SOURCE // 
+  let ctaImage = document.getElementById("cta-img");
+  ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+//MAIN CONTENT//
+  // TOP CONTENT //
+    const topHeader = document.querySelectorAll('.top-content h4');
+    const topcontentTexts = document.querySelectorAll('.top-content p');
+    // FEATURES // 
+      topHeader[0].textContent = (siteContent['main-content']['features-h4'])
+      topcontentTexts[0].textContent = (siteContent['main-content']['features-content'])
+      // ABOUT // 
+      topHeader[1].textContent = (siteContent['main-content']['about-h4']);
+      topcontentTexts[1].textContent = (siteContent['main-content']['about-content']);
+  // MIDDLE IMAGE DIVIDER // 
+    let middleimg = document.getElementById("middle-img");
+    middleimg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+  // BOTTOM CONTENT // 
+    const bottomHeader = document.querySelectorAll('.bottom-content h4');
+    const bottomcontentTexts = document.querySelectorAll('.bottom-content p');
+      // SERVICE // 
+        bottomHeader[0].textContent = (siteContent['main-content']['services-h4']);
+        bottomcontentTexts[0].textContent = (siteContent['main-content']['services-content']);
+      // PRODUCT // 
+        bottomHeader[1].textContent = (siteContent['main-content']['product-h4']);
+        bottomcontentTexts[1].textContent = (siteContent['main-content']['product-content']);
+      // VISION // 
+        bottomHeader[2].textContent = (siteContent['main-content']['vision-h4']);
+        bottomcontentTexts[2].textContent = (siteContent['main-content']['vision-content']);
+
+// CONTACT //
+  const addressFields = document.querySelectorAll('.contact p');
+  const contactHeader = document.querySelectorAll('.contact h4');
+
+  contactHeader[0].textContent = (siteContent['contact']['contact-h4']);
+
+  addressFields[0].textContent = (siteContent['contact']['address']);
+  addressFields[1].textContent = (siteContent['contact']['phone']);
+  addressFields[2].textContent = (siteContent['contact']['email']);
